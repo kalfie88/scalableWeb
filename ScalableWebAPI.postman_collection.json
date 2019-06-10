@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "9a8736be-4005-4b14-b74e-a3ff4fe1d963",
+		"name": "ScalableWebAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/v1/diff/1/right",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": {\n    \"first\": \"Jane\",\n    \"last\": \"Doe\",\n    \"nickname\": \"Jenny\"\n  },\n  \"birthday\": \"1990-01-01\",\n  \"occupation\": null,\n  \"phones\": [\n    {\n      \"number\": \"111111111\",\n      \"type\": \"mobile\"\n    }\n  ],\n  \"favorite\": true,\n  \"groups\": [\n    \"close-friends\",\n    \"gym\"\n  ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/v1/diff/1/right",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"diff",
+						"1",
+						"right"
+					]
+				},
+				"description": "Use this endpoint to set the right Json to be compared"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/v1/diff/1/left",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": {\n    \"first\": \"John\",\n    \"last\": \"Doe\"\n  },\n  \"address\": null,\n  \"birthday\": \"1980-01-01\",\n  \"company\": \"Acme\",\n  \"occupation\": \"Software engineer\",\n  \"phones\": [\n    {\n      \"number\": \"000000000\",\n      \"type\": \"home\"\n    },\n    {\n      \"number\": \"999999999\",\n      \"type\": \"mobile\"\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/v1/diff/1/left",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"diff",
+						"1",
+						"left"
+					]
+				},
+				"description": "Use this endpoint to save the left Json to be compared"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/v1/diff/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/v1/diff/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"diff",
+						"1"
+					]
+				},
+				"description": "After you have run the two POST method for left and right Json you can run this endpoint to get the differences between the 2 files.\nThis returns a simple text response."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/v1/diff/1/saveDiff",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/diff/1/saveDiff",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"diff",
+						"1",
+						"saveDiff"
+					]
+				},
+				"description": "With this endpoint you can save in the H2 schema the result of the diff operation and can retrieve it or delete it later"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/v1/diff/1/findDiff",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/diff/1/findDiff",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"diff",
+						"1",
+						"findDiff"
+					]
+				},
+				"description": "This endpoint allows you to find a diff file already saved in the H2 schema."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/v1/diff/1/deleteDiff",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/diff/1/deleteDiff",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"diff",
+						"1",
+						"deleteDiff"
+					]
+				},
+				"description": "This endpoint is to delete a diff response already saved in the H2 schema."
+			},
+			"response": []
+		}
+	]
+}

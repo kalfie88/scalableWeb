@@ -1,0 +1,8 @@
+com.waes.scalableWeb
+com.waes.scalableWeb.common
+com.waes.scalableWeb.controller
+com.waes.scalableWeb.dto
+com.waes.scalableWeb.entity
+com.waes.scalableWeb.enums
+com.waes.scalableWeb.repository
+com.waes.scalableWeb.service
