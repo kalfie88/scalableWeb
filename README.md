@@ -5,9 +5,9 @@ The Api has an embedded H2 schema were you can also save the result of the compa
 
 
 
-##Project Structure
+## Project Structure
 
-###src/main/java
+### src/main/java
 
 Under this path we have several packages mentioned below:
 
@@ -28,14 +28,14 @@ Under this path we have several packages mentioned below:
 8. com.waes.scalableWeb.service -> Application services 
 
 
-###src/main/resources
+### src/main/resources
 
 1. templates -> There are 2 input Json example files in here in case you need them for the testing of the endpoints.
 
 2. H2 files -> data.sql is a dummy data for H2, and schema.sql is the script to create the schema in H2.
 
 
-###src/test/java
+### src/test/java
 
 1. com.waes.scalableWeb -> Integration test
 
@@ -67,12 +67,12 @@ So please follow these instructions so you can setup the environment properly.
 4. Get Lombok -> Lombok is an external jar that needs to be added into your IDE. For more information on how to add Lombok to your IDE (Eclipse or IntelliJ) follow this guide: [Lombok-IDE](https://www.baeldung.com/lombok-ide) Also there’s a copy of the jar file (Lombok.jar) in the project under the root folder.
 
 
-####For testing
+#### For testing
 
 Since the project is a backend project, you’ll need a testing tool to hit the endpoints such as Postman. 
 
 
-#####Installing Postman
+##### Installing Postman
 
 1. Download the app from the official site: [Postman](https://www.getpostman.com/downloads/)
 
@@ -101,7 +101,7 @@ git clone https://github.com/kalfie88/scalableWeb.git
 6. To hit the Endpoints: Open Postman and run each of the endpoints in the collection imported in the section above (Prerequisites)
 
 
-####Endpoints available 
+#### Endpoints available 
 
 To see the documentation of the endpoints available you can refer to Swagger.
 
