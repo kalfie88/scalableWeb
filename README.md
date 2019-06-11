@@ -17,7 +17,7 @@ Under this path we have several packages mentioned below:
 
 3. com.waes.scalableWeb.controller -> Application controllers
 
-4. com.waes.scalableWeb.dto -> DTO class to map the table on the H2 schema
+4. com.waes.scalableWeb.dto -> DTO class to separate the service layer of the persistance layer.
 
 5. com.waes.scalableWeb.entities -> Objects to map the entities needed in the application
 
@@ -41,7 +41,7 @@ Under this path we have several packages mentioned below:
 
 2. com.waes.scalableWeb.common -> Unit test for JsonManipulationManager class
 
-3. com.waes.scalableWeb.dto -> Unit test for mapping the DTO info
+3. com.waes.scalableWeb.dto -> Unit test to check the DTO's functionality
 
 4. com.waes.scalableWeb.repository -> Unit test for saving, retrieving and deleting info from the H2 schema
 
